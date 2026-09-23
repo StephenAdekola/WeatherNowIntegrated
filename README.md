@@ -5,7 +5,8 @@ A Complete full-stack weather application, built in four stages across the Decod
 ![Weather Now screenshot](Screenshot.png)
 
 ## Live demo
-[View The Live Demo](https://weathernowintegrated.vercel.app/)
+[View The Live Site](https://weathernowintegrated.vercel.app/)
+
 [View The API Docs](https://weathernowbackend.vercel.app/docs/)
 
 ## What this project demonstrates
