@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Now Integrated</title>
+  <meta name="description" content="Check current conditions and a 5-day forecast for any city." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <span class="logo">Weather Now Integrated</span>
+      <button class="unit-toggle" id="unitToggle" aria-label="Switch temperature unit">°C / °F</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <div class="container">
+        <h1>Check the weather anywhere</h1>
+        <form class="search-form" id="searchForm">
+          <label for="cityInput" class="visually-hidden">City name</label>
+          <input
+            type="text"
+            id="cityInput"
+            name="city"
+            placeholder="Search a city, e.g. Benin City"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="btn-primary">Search</button>
+        </form>
+        <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+        <p class="hint">Try: Benin City, Lagos, Abuja, London, New York, Nairobi, Cape Town, Lucknow</p>
+      </div>
+    </section>
+
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="container dashboard-grid">
+
+        <article class="current-card" id="currentCard">
+          <p class="location" id="location"></p>
+          <p class="current-icon" id="currentIcon" aria-hidden="true"></p>
+          <p class="current-temp"><span id="currentTemp"></span><span class="unit-label">°C</span></p>
+          <p class="current-desc" id="currentDesc"></p>
+          <div class="current-meta">
+            <div>
+              <span class="meta-label">High</span>
+              <span id="tempHigh">—</span>
+            </div>
+            <div>
+              <span class="meta-label">Low</span>
+              <span id="tempLow">—</span>
+            </div>
+            <div>
+              <span class="meta-label">Wind</span>
+              <span id="windSpeed">—</span>
+            </div>
+          </div>
+        </article>
+
+        <div class="forecast-panel">
+          <h2>Next 5 days</h2>
+          <div class="forecast-grid" id="forecastGrid"></div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Demo weather data</p>
+      <p>&copy; <span id="year"></span> Stephen Adekola</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
